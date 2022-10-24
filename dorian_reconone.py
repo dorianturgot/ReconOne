@@ -15,6 +15,8 @@ def load_images_from_folder(folder):
             images.append(img)
     return images
 
+file = open("result.txt", 'w')
+
 images = load_images_from_folder("images")
 
 for imageFile in images :
@@ -24,6 +26,7 @@ for imageFile in images :
     box, label, count = cv.detect_common_objects(img)
     output = draw_bbox(img, box, label, count)
 
+    cv2.imwrite("result.png", output)
     output = cv2.cvtColor(output,cv2.COLOR_BGR2RGB)
     plt.figure(figsize=(10,10))
     plt.axis('off')
@@ -31,3 +34,4 @@ for imageFile in images :
     plt.show()
 
     print("Nombre de personnes sur l'image : " + str(len(label)))
+    file.write("Nombre de personnes sur l'image : " + str(len(label)))
