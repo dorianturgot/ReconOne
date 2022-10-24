@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-img = mpimg.imread('sample.jpeg')
+img = mpimg.imread('imagegroupe.jpg')
 imgplot = plt.imshow(img)
 plt.show()
