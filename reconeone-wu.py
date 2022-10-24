@@ -1,6 +1,7 @@
+import cv2
+import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
+import cvlib as cv
+from cvlib.object_detection import draw_bbox
+from numpy.lib.polynomial import poly
 
-img = mpimg.imread('imagegroupe.jpg')
-imgplot = plt.imshow(img)
-plt.show()
