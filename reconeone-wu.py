@@ -6,7 +6,7 @@ import cvlib as cv
 from cvlib.object_detection import draw_bboxpip
 from numpy.lib.polynomial import poly
 
-img = cv2.imread('image1.jpg')
+img = cv2.imread('imagegroupe.jpg')
 img1 = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 plt.figure(figsize=(10,10))
 plt.axis('off')
@@ -21,4 +21,4 @@ plt.axis('off')
 plt.imshow(output)
 plt.show()
 	
-print("Number of objects in this image are " +str(len(label))
+print("Number of objects in this image are " + str(len(label)))
