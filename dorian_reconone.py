@@ -14,24 +14,38 @@ def load_images_from_folder(folder):
         if img is not None:
             images.append(img)
     return images
+""""
+def count_people():
+    nbPersonnes = []
+    images = load_images_from_folder("images")
 
-file = open("result.txt", 'w')
+    for imageFile in images :
+        img = cv2.imread(imageFile)
+        img1 = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 
-images = load_images_from_folder("images")
+        box, label, count = cv.detect_common_objects(img)
+        #output = draw_bbox(img, box, label, count)
 
-for imageFile in images :
-    img = cv2.imread(imageFile)
-    img1 = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+        #cv2.imwrite("result.png", output)
+        #output = cv2.cvtColor(output,cv2.COLOR_BGR2RGB)
+        #plt.figure(figsize=(10,10))
+        #plt.axis('off')
+        #plt.imshow(output)
+        #plt.show()
 
-    box, label, count = cv.detect_common_objects(img)
-    output = draw_bbox(img, box, label, count)
+        nbPersonnes.append(len(label))
+        #file.write("Nombre de personnes sur l'image : " + str(len(label)))
+    return nbPersonnes
+"""
 
-    cv2.imwrite("result.png", output)
-    output = cv2.cvtColor(output,cv2.COLOR_BGR2RGB)
-    plt.figure(figsize=(10,10))
-    plt.axis('off')
-    plt.imshow(output)
-    plt.show()
+def count_people():
+    nbPersonnes = []
+    images = load_images_from_folder("images")
 
-    print("Nombre de personnes sur l'image : " + str(len(label)))
-    file.write("Nombre de personnes sur l'image : " + str(len(label)))
+    for imageFile in images :
+        img = cv2.imread(imageFile)
+        box, label, count = cv.detect_common_objects(img)
+        nbPersonnes.append(len(label))
+    return nbPersonnes
+
+print(count_people())
