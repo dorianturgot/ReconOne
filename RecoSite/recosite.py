@@ -30,4 +30,5 @@ def statistique_menu():
     vectors = test()
     return render_template("stats.html", vectors=vectors)
 
-app.run()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=80, debug=True)
