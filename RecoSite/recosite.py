@@ -23,7 +23,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def menu():
-    return render_template("accueil.html")
+    return render_template("index.html")
 
 @app.route("/stats.html")
 def statistique_menu():
