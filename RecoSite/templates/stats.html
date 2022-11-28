@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="logo.png">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
     <title> RecoOne Statistiques </title>
   </head>
   <body>
   </body>
   <header>
-    <img src="logo.png" alt="logo RecoOne">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="logo RecoOne">
     <h1> Voici les stastiques de la vidéo :  </h1>
   </header>
   <p> {{ vectors }} </p>

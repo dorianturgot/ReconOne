@@ -1,5 +1,6 @@
 # Fonction à testetr
 import numpy as np
+import os
 
 def test():
     # Algorithme de Gram-Schmidt 
@@ -30,5 +31,11 @@ def statistique_menu():
     vectors = test()
     return render_template("stats.html", vectors=vectors)
 
+@app.route("/index.html")
+def menu2():
+    return render_template("index.html")
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80, debug=True)
+    DEBUG = True
+    HOST = '0.0.0.0'
+    app.run(debug=DEBUG, host=HOST)
