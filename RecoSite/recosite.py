@@ -36,6 +36,4 @@ def menu2():
     return render_template("index.html")
 
 if __name__ == '__main__':
-    DEBUG = True
-    HOST = '0.0.0.0'
-    app.run(debug=DEBUG, host=HOST)
+    app.run(host='0.0.0.0', port=80, debug=True)
