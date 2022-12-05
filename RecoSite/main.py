@@ -6,6 +6,8 @@ from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 from app import app 
 
+from video_traitement import *
+
 # Application web
 
 from flask import Flask, render_template
@@ -44,8 +46,13 @@ def upload_file():
 def menu2():
     return render_template("index.html")
 
+@app.route('/stats.html')
+def traitement(f):
+    countPeople(f)
+    return render_template("stats.html")
+
 if __name__ == '__main__':
     DEBUG = True
     HOST = '0.0.0.0'
-    app.run(debug=DEBUG, host=HOST)
+    app.run(debug=DEBUG, host=HOST, port=80)
 
