@@ -40,6 +40,10 @@ def upload_file():
 	#flash('Video uploadée')
 	return render_template("stats.html", vectors=vectors, f=f)
 
+@app.route('/index.html')
+def menu2():
+    return render_template("index.html")
+
 if __name__ == '__main__':
     DEBUG = True
     HOST = '0.0.0.0'

@@ -12,13 +12,26 @@
       <img src="{{ url_for('static', filename='logo.png') }}" alt="logo RecoOne">
       <h1> Quelle vidéo voulez-vous traiter ?  </h1>
     </header>
-    <form>
-      <label for="vid">Choisir une vidéo :</label>
-      <input type="file" id="vid" name="vid" accept="video/mp4, video/avi">
-      <br/>
-      <nav>
-        <a href="stats.html"> <input type="button" value="Traiter"> </a>
-      </nav>
-    </form>
+    <p>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+      {% endwith %}
+    </p>
+    <form method="post" action="/" enctype="multipart/form-data">
+      <dl>
+      <p>
+        <input type="file" name="file" autocomplete="off" required>
+      </p>
+      </dl>
+      <p>
+        <input type="submit" value="Traiter">
+      </p>
+  </form>
   </body>
 </html>
