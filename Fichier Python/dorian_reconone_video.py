@@ -5,7 +5,7 @@ import cvlib as cv
 import os
 import math
 
-def countPeople(percentage = 500):
+def countPeople(percentage = 400):
     capture = cv2.VideoCapture("video1.mp4")
     frame_count = capture.get(cv2.CAP_PROP_FRAME_COUNT)
     print("framecount = " + str(frame_count))
