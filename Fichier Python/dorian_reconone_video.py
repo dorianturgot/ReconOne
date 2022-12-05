@@ -11,6 +11,7 @@ def countPeople(percentage = 400):
     print("framecount = " + str(frame_count))
     print("to exit press Q")
     framerate = frame_count / percentage
+    s_par_image=framerate
     nbPersonnes = []
     if capture:
         oldbox = []
@@ -51,6 +52,6 @@ def countPeople(percentage = 400):
             
             if key == ord('q'):
                     break
-    return nbPersonnes, frame_count, percentage
+    return nbPersonnes, frame_count, percentage,s_par_image
 
-print(countPeople())
+#print(countPeople())

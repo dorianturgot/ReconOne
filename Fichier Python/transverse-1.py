@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from matplotlib import colors
 from matplotlib.ticker import PercentFormatter
+import dorian_reconone_video as dodo
 
 #il renvoie le nombre de nouvelles personnes multiplié par l'intervalle de confiance de chaque personne qui chanque x% de la video
 #ensuite il renvoie le nbre d'image dans la video
@@ -60,6 +61,13 @@ def affichageH(Nb, d, debut):
     plt.grid()
     plt.show()
     return
+
+nb_perso=dodo.countPeople(400)[0]
+framerate=dodo.countPeople(400)[3]
+
+print("BBBBBBBBBBBBBBBBIIIIIIIIIIIIIIIIITTTTTTTTTTTTTTTTEEEEEEEEEEEEEEE")
+print(affichage(nb_perso,framerate,0))
+print("BBBBBBBBBBBBBBBBIIIIIIIIIIIIIIIIITTTTTTTTTTTTTTTTEEEEEEEEEEEEEEE")
 
 N_points = 100000
 n_bins = 20
