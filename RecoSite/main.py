@@ -48,7 +48,7 @@ def menu2():
 
 @app.route('/stats.html')
 def traitement(f):
-    countPeople(f)
+    #countPeople(f)
     return render_template("stats.html")
 
 if __name__ == '__main__':
