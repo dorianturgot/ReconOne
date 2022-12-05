@@ -38,6 +38,11 @@ def countPeople(percentage = 400):
                             print("-------")
                             print((math.sqrt((oldbox[i][0] - box[i][0])**2)))
                             print("------------")"""
+                        print("LABEELLLLLLLLLLLLLLLLLLLLLLLLL")
+                        print(label)
+                        print("LABBEEEEEEEEEEEEELLLLLLLLLLLLLLLLLLL")
+                        print(count)
+                        print("COUNNNNNNNNNNNNNNNNNT")
                         if label[i] == "person" :
                             totalNewPersonOnFrame += round(count[i], 3)
                             
@@ -54,4 +59,4 @@ def countPeople(percentage = 400):
                     break
     return nbPersonnes, frame_count, percentage,s_par_image
 
-#print(countPeople())
+print(countPeople())

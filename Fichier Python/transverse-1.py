@@ -63,10 +63,11 @@ def affichageH(Nb, d, debut):
     return
 
 nb_perso=dodo.countPeople(400)[0]
+nb_perso_debit=nb_perso[1:]
 framerate=dodo.countPeople(400)[3]
 
 print("BBBBBBBBBBBBBBBBIIIIIIIIIIIIIIIIITTTTTTTTTTTTTTTTEEEEEEEEEEEEEEE")
-print(affichage(nb_perso,framerate,0))
+print(affichage(nb_perso_debit,framerate,0))
 print("BBBBBBBBBBBBBBBBIIIIIIIIIIIIIIIIITTTTTTTTTTTTTTTTEEEEEEEEEEEEEEE")
 
 N_points = 100000
