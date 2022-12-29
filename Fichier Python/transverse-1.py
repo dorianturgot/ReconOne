@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from matplotlib import colors
 from matplotlib.ticker import PercentFormatter
-import dorian_reconone_video as dodo
+import dorian_reconone_video as dodo 
 
 #il renvoie le nombre de nouvelles personnes multiplié par l'intervalle de confiance de chaque personne qui chanque x% de la video
 #ensuite il renvoie le nbre d'image dans la video
@@ -12,6 +12,7 @@ import dorian_reconone_video as dodo
 #en fait, c'est le framerate qui va ici être l'incrémentation des images de la video.
 
 def debitmoyen(Nb, d):
+    #cette fonction calcule la moyenne aritmétique du nombre de personnes rentrant au cours du temps
     D=[]
     for i in range(len(Nb)):
         D.append(Nb[i]/d)
@@ -36,6 +37,24 @@ def affichage(Nb, d, debut):
     plt.grid()
     plt.show()
     return
+
+def moyen(Nb, d):
+    #cette fonction calcule la moyenne aritmétique du nombre de personnes rentrant au total
+    
+    for i in range(len(Nb)):
+        s = s + Nb[i]
+    return (s/(d*len(Nb)))
+
+def ecartType(Nb, d):
+    #cette fonction prends en argument la liste des nouvelles personnes détectées.
+    #ces personnes seront considérées comme des variables aléatoires et exploitées comme tel.
+    ecT = 0
+    u = moyen(Nb, d)
+    for i in range(len(Nb)):
+        ect = ect + ((Nb[i]-u)*(Nb[i]-u))
+    return (sqrt(ect/4))  
+
+    
 
 def affichageH(Nb, d, debut):
     fig = plt.figure()
@@ -88,7 +107,7 @@ N, bins, patches = axs[0].hist(dist1, bins=n_bins)
 
 # We'll color code by height, but you could use any scalar
 fracs = N / N.max()
-
+ 
 # we need to normalize the data to 0..1 for the full range of the colormap
 norm = colors.Normalize(fracs.min(), fracs.max())
 
