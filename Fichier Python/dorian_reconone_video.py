@@ -3,7 +3,7 @@ import cv2
 
 import cvlib as cv
 import os
-import math
+import math 
 
 def countPeople(percentage = 400):
     capture = cv2.VideoCapture("videos/video2.mp4")

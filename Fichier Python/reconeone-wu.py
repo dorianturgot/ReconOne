@@ -7,7 +7,7 @@ from numpy.lib.polynomial import poly
 
 img = cv.imread('imagegroupe.jpg')
 img1 = cv.cvtColor(img,cv2.COLOR_BGR2RGB)
-plt.figure(figsize=(10,10))
+plt.figure(figsize=(10,10)) 
 plt.axis('off')
 plt.imshow(img1)
 plt.show()

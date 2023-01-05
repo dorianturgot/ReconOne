@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from matplotlib import colors
 from matplotlib.ticker import PercentFormatter
-import dorian_reconone_video as dodo 
+import dorian_reconone_video as dodo
 
 #il renvoie le nombre de nouvelles personnes multiplié par l'intervalle de confiance de chaque personne qui chanque x% de la video
 #ensuite il renvoie le nbre d'image dans la video
@@ -40,7 +40,7 @@ def affichage(Nb, d, debut):
 
 def moyen(Nb, d):
     #cette fonction calcule la moyenne aritmétique du nombre de personnes rentrant au total
-    
+
     for i in range(len(Nb)):
         s = s + Nb[i]
     return (s/(d*len(Nb)))
@@ -52,9 +52,9 @@ def ecartType(Nb, d):
     u = moyen(Nb, d)
     for i in range(len(Nb)):
         ect = ect + ((Nb[i]-u)*(Nb[i]-u))
-    return (sqrt(ect/4))  
+    return (sqrt(ect/4))
 
-    
+
 
 def affichageH(Nb, d, debut):
     fig = plt.figure()
@@ -107,7 +107,7 @@ N, bins, patches = axs[0].hist(dist1, bins=n_bins)
 
 # We'll color code by height, but you could use any scalar
 fracs = N / N.max()
- 
+
 # we need to normalize the data to 0..1 for the full range of the colormap
 norm = colors.Normalize(fracs.min(), fracs.max())
 

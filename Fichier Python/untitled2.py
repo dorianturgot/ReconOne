@@ -5,7 +5,7 @@ import numpy as np
 NB=[5,4,7,8]
 d=125
 #débit moyen par session
-
+ 
 def debit(NB,d):
     D=[]
     T=[0]
