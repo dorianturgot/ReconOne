@@ -13,6 +13,7 @@ body {
 }
 input {
   margin: 8px;
+  border-radius: 8px;
   background-color: aliceblue;
   text-align: center;
   display: inline-block;
@@ -28,7 +29,8 @@ b {
 /* Selecteur d'ID */
 #rcorners1 {
   margin: 15px;
-  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 25px;
   padding: 10px;
   background: #12a8b3;
@@ -130,4 +132,8 @@ b {
   text-transform: uppercase;
   font-weight : bold;
   text-align: center;
+}
+
+.navbar a:hover {
+  color: #12a8b3;
 }

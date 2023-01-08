@@ -2,23 +2,31 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="logo.png">
-    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
-    <title> RecoOne Statistiques </title>
+    <link href="{{ url_for('static', filename='../static/style.css') }}" rel="stylesheet" type="text/css">
+    <title> ReconOne Statistiques </title>
   </head>
   <body>
     <header>
-      <img src="{{ url_for('static', filename='logo.png') }}" alt="logo RecoOne">
+      <img src="{{ url_for('static', filename='../static/logo.png') }}" alt="logo RecoOne">
     </header>
-    <div id="rcorners1">
-      <h1> Voici les statistiques de la vidéo :  </h1>
-      {% if result %}
-        <img id="analyse" src="static/analyse.png">
-      {% endif %}
-    </div>
+
+    <main>
+      <div id="rcorners1">
+        <h1>Statistiques de la vidéo</h1>
+        {% if result %}
+          <img id="analyse" src="static/analyse.png">
+        {% endif %}
+      </div>
+    </main>
+
     <footer>
-        <a id="revenir" href="index.html"> Revenir à l'accueil </a>
+      <div class="navbar">
+        <ul>
+          <li> <a id="revenir" href="index.html"> Revenir à l'accueil </a> </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

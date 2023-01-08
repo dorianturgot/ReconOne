@@ -2,44 +2,47 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../static/logo.png">
     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
-    <title> RecoOne Accueil </title>
+    <title> ReconOne Accueil </title>
   </head>
   <body>
     <header>
-      <img src="{{ url_for('static', filename='logo.png') }}" alt="logo RecoOne">
-      
-      
+      <img src="{{ url_for('static', filename='../static/logo.png') }}" alt="logo RecoOne">
     </header>
-    <div id="rcorners1">
-      <h1> Quelle vidéo voulez-vous traiter ?</h1>
-      <p>
-        {% with messages = get_flashed_messages() %}
-          {% if messages %}
-          <ul>
-          {% for message in messages %}
-            <li>{{ message }}</li>
-          {% endfor %}
-          </ul>
-          {% endif %}
-        {% endwith %}
-      </p>
-      <form method="post" action="/" enctype="multipart/form-data">
-        <dl>
+    <main>
+      <div id="rcorners1">
+        <h1> Quelle vidéo voulez-vous traiter ?</h1>
         <p>
-          <input type="file" name="file" autocomplete="off" accept="video/mp4" required>
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+          {% endwith %}
         </p>
-        </dl>
-        <p>
+        <form method="post" action="/" enctype="multipart/form-data">
+          <dl>
+           <input type="file" name="file" autocomplete="off" accept="video/mp4" required>
+          </dl>
           <input type="submit" class="button-3" onclick="loading()" value="Traiter">
-        </p>
-      </form>
-      <img id="load" src="static/loading.gif" alt="">
-    </div>
-  <footer>
-    <script type="text/javascript" src="static/script.js"></script>
-  </footer>
+        </form>
+        <img id="load" src="static/loading.gif" alt="Chargement logo">
+      </div>
+    </main>
+    <footer>
+      <div class="navbar">
+        <ul>
+          <li> <a href="#">Vidéo du projet</a></li>
+          <li> <a href="#">Rapport du projet</a> </li> 
+          <li> <a href="#">PPT du projet</a></li>
+        </ul>
+      </div>
+      <script type="text/javascript" src="../static/script.js"></script>
+    </footer>
   </body>
 </html>
