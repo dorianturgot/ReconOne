@@ -29,6 +29,14 @@ input {
     width: 60px;
 }
 
+#analyse {
+    width: 500px;
+}
+
+#revenir :hover {
+    color: rgb(88, 0, 88);
+}
+
 .button-3 {
   appearance: none;
   background-color: #2ea44f;

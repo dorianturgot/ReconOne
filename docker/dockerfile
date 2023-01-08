@@ -1,6 +1,0 @@
-FROM python
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install pip -y
-RUN pip3 install flask
-VOLUME [ "../RecoSite", "/app" ]
-CMD [ "python3", "/app/recosite.py" ]

@@ -7,6 +7,7 @@ from werkzeug.utils import secure_filename
 from app import app
 
 from video_traitement import *
+from analyse import *
 
 # Application web
 
@@ -54,7 +55,16 @@ def menu2():
 
 @app.route('/stats.html')
 def traitement():
-    result = countPeople("video.mp4")
+    people = countPeople("video.mp4")
+
+    nb_perso = people[0]
+    nb_perso_debit = nb_perso[1:]
+    framerate = people[3]
+
+    affichage(nb_perso_debit, framerate, 0)
+
+    result = open("static/analyse.png", "r")
+
     return render_template("stats.html", result=result)
 
 
