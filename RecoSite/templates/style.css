@@ -1,11 +1,133 @@
+/* Style géneral */
+/* Selecteur de balises */
 img {
+    text-align: center;
     width: 200px;
 }
-
 body {
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: beige;
+  font-family: 'Courier New', Courier, monospace;
+}
+input {
+  margin: 8px;
+  background-color: aliceblue;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+}
+b {
+  text-align: center;
+  font-size: 15px;
 }
 
-input {
-    margin: 8px;
+
+/* Selecteur d'ID */
+#rcorners1 {
+  margin: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 25px;
+  padding: 10px;
+  background: #12a8b3;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+  display:inline-block;
+  box-shadow: 0px 3px 7px black;
+  }
+#load {
+    display: none;
+    width: 60px;
+}
+#analyse {
+    width: 500px;
+}
+#revenir :hover {
+    color: rgb(88, 0, 88);
+}
+
+
+/* Bouton de Traitement */
+.button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+.button-3:hover {
+  background-color: #2c974b;
+}
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+
+/* Bouton de choix du fichier */
+.button-choose {
+  display: block;
+  white-space: nowrap;
+  max-width: 200px;
+  background-color: gray;
+}
+
+
+/* Barre de navigation horizontale */
+.navbar ul {
+  list-style : none;
+  background: black;
+  padding : 0;
+  margin : 0;
+  text-align: center;
+  position: relative;
+}
+.navbar li {
+  display : inline-block;
+  position: relative;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  width: 100px;
+  display : block;
+  padding : 25px 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight : bold;
+  text-align: center;
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../static/logo.png">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../static/script.js"></script>
+    <title> RecoOne Accueil </title>
+  </head>
+  <body>
+    <header>
+      <img src="{{ url_for('static', filename='../static/logo.png') }}" alt="logo RecoOne">
+      <br/>
+      <b> RecoOne </b>
+    </header>
+
+    <main>
+      <div id="rcorners1">
+        <h1> Quelle vidéo voulez-vous traiter ?</h1>
+        <p>
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+          {% endwith %}
+        </p>
+        <form method="post" action="/" enctype="multipart/form-data">
+          <dl>
+           <input type="file" name="file" autocomplete="off" accept="video/mp4" class="button-choose" required>
+          </dl>
+          <input type="submit" class="button-3" onclick="loading()" value="Traiter">
+        </form>
+        <img id="load" src="static/loading.gif" alt="Chargement logo">
+      </div>
+    </main>
+  
+    <footer>
+      <div class="navbar">
+        <ul>
+          <li> <a href="#"> Video de présentation du projet </a></li>
+          <li> <a href="#"> Rapport du projet </a> </li> 
+          <li> <a href="#"> Presentation PPT du projet </a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
