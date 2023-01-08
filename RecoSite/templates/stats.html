@@ -8,11 +8,15 @@
     <title> RecoOne Statistiques </title>
   </head>
   <body>
-  </body>
-  <header>
+    <header>
     <img src="{{ url_for('static', filename='logo.png') }}" alt="logo RecoOne">
-    <h1> Voici les stastiques de la vidéo :  </h1>
+    <h1> Voici les statistiques de la vidéo :  </h1>
   </header>
+  {% if result %}
+    <p id="text">{{ result }}</p>
+  {% endif %}
+  </body>
+
   <p> {{ vectors }} </p>
   <footer>
       <a href="index.html"> Revenir à l'accueil </a>

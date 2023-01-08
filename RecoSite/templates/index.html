@@ -10,28 +10,36 @@
   <body>
     <header>
       <img src="{{ url_for('static', filename='logo.png') }}" alt="logo RecoOne">
-      <h1> Quelle vidéo voulez-vous traiter ?  </h1>
+      
+      
     </header>
-    <p>
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-        {% for message in messages %}
-          <li>{{ message }}</li>
-        {% endfor %}
-        </ul>
-        {% endif %}
-      {% endwith %}
-    </p>
-    <form method="post" action="/" enctype="multipart/form-data">
-      <dl>
+    <div id="rcorners1">
+      <h1> Quelle vidéo voulez-vous traiter ?</h1>
       <p>
-        <input type="file" name="file" autocomplete="off" required>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+          {% endif %}
+        {% endwith %}
       </p>
-      </dl>
-      <p>
-        <input type="submit" value="Traiter">
-      </p>
-  </form>
+      <form method="post" action="/" enctype="multipart/form-data">
+        <dl>
+        <p>
+          <input type="file" name="file" autocomplete="off" accept="video/mp4" required>
+        </p>
+        </dl>
+        <p>
+          <input type="submit" class="button-3" onclick="loading()" value="Traiter">
+        </p>
+    </form>
+    <img id="load" src="static/loading.gif" alt="">
+    </div>
+  <footer>
+    <script type="text/javascript" src="static/script.js"></script>
+  </footer>
   </body>
 </html>
