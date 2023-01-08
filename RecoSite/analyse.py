@@ -18,6 +18,11 @@ def debitmoyen(Nb, d):
         D.append(Nb[i] / d)
     return D
 
+def debit(NB):
+    Dn=[]
+    for i in NB:
+        Dn+=[i]
+    return Dn
 
 def Temps(Nb, d, debut):
     T = [debut + d / 2]
@@ -27,12 +32,16 @@ def Temps(Nb, d, debut):
         T.append(t)
     return T
 
+def giveTime(Nb, d, debut):
+    sec = Temps(Nb, d, debut)
+    return sec[-1]
+
 def affichage(Nb, d, debut):
-    D = debitmoyen(Nb, d)
-    T = Temps(Nb, d, debut)
-    plt.plot(T, D)
-    plt.xlabel('durée')
-    plt.ylabel('personnes')
-    plt.grid()
-    plt.savefig('static/analyse.png')
-    return
+     D = debitmoyen(Nb, d)
+     T = Temps(Nb, d, debut)
+     plt.plot(T, D)
+     plt.xlabel('durée')
+     plt.ylabel('personnes')
+     plt.grid()
+     plt.savefig('static/analyse.png')
+     return

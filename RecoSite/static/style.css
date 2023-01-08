@@ -46,6 +46,7 @@ b {
 }
 #analyse {
     width: 500px;
+    margin: 20px;
 }
 #revenir :hover {
     color: rgb(88, 0, 88);
@@ -115,6 +116,7 @@ b {
   background: black;
   padding : 0;
   margin : 0;
+  margin-bottom: 20px;
   text-align: center;
   position: relative;
 }

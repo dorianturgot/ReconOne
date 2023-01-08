@@ -47,7 +47,16 @@ def traitement():
 
     result = open("static/analyse.png", "r")
 
-    return render_template("stats.html", result=result)
+    nb_total = 0
+
+    for i in range(len(nb_perso)):
+        nb_total += nb_perso[i]
+
+    nb_total = int(nb_total)
+
+    duree = int(giveTime(nb_perso_debit, framerate, 0))
+
+    return render_template("stats.html", result=result, duree=duree, nb_total=nb_total)
 
 
 if __name__ == '__main__':

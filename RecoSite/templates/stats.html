@@ -16,7 +16,12 @@
       <div id="rcorners1">
         <h1>Statistiques de la vidéo</h1>
         {% if result %}
+          <h3>Débit moyen</h3>
           <img id="analyse" src="static/analyse.png">
+          <h3>Nombre de personnes totales</h3>
+          {{ nb_total }}
+          <h3>Durée totale de la vidéo en secondes</h3>
+          {{ duree }}
         {% endif %}
       </div>
     </main>
