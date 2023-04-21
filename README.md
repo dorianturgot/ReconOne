@@ -1,5 +1,5 @@
 # ReconOne
-Person recognition website that shows statistics on given videos about the flow of people.
+Person recognition analysis website that analyse videos and give statistics about the flow of people.
 
 *Made with Flask, OpenCV + Tensorflow.*
 
